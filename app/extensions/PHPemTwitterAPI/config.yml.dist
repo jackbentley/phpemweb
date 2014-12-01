@@ -1,0 +1,10 @@
+template:
+  tweet: assets/tweet.twig
+
+auth:
+  consumer:
+    key: SomeConsumerKey
+    secret: SomeConsumerSecret
+  access:
+    token: SomeAccessToken
+    secret: SomeAccessTokenSecret

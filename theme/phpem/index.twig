@@ -44,20 +44,9 @@
             <section class="tweets">
                 <h1>{{ __("Tweets") }}</h1>
                 <ul class="item-list">
-                    <li>
-                        <p>Just a day to go for the November meetup by <a href="#">@lornajane</a> on New Wave PHP <a href="#">http://www.meetup.com/ugPHPem/events/211696112/&hellip;</a> <a href="#">#Leicester</a> <a href="#">#EastMidlands</a></p>
-                        <small class="date"><a href="#">10:54am</a> on 5th November 2014</small>
-                    </li>
-                    <li>
-                        <p>On November 6th .<a href="#">@lornajane</a> will be doing a talk on New Wave PHP <a href="#">http://www.meetup.com/ugPHPem/events/211696112/&hellip;</a></p>
-                        <small class="date"><a href="#">11:06am</a> on 16th October 2014</small>
-                    </li>
-                    <li>
-                        <p>We have a new logo! Curtesy of <a href="#">@vivaitltd</a> Thanks guys :)</p>
-                        <small class="date"><a href="#">12:16pm</a> on 15th October 2014</small>
-                    </li>
+                    {{ latestTweets('PHPem', 3) }}
                 </ul>
-                <a class="button" href="https://twitter.com/phpem">Follow @PHPem</a>
+                <a class="button" href="https://twitter.com/PHPem">Follow @PHPem</a>
             </section>
 
         </div>

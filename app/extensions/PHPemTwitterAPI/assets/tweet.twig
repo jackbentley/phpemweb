@@ -1,0 +1,11 @@
+<li>
+    {% if retweeted_status is empty %}
+        <p>{{ text|striptags('<a>')|raw }}</p>
+        <small class="author">by <a href="https://www.twitter.com/{{ user.screen_name }}" target="_blank">{{ user.name }}</a></small>
+        <small class="date">{{ __("at") }} <a href="http://www.twitter.com/{{ user.screen_name }}/status/{{ id_str }}" target="_blank">{{ created_at|date("g:sa") }}</a> {{ __("on") }} {{ created_at|date("jS F Y") }}</small>
+    {% else %}
+        <p><small class="retweet"><a href="https://www.twitter.com/{{ user.screen_name }}/status/{{ id_str }}" target="_blank">{{ __("Retweet") }}</a></small>{{ retweeted_status.text|striptags('<a>')|raw }}</p>
+        <small class="author">by <a href="https://www.twitter.com/{{ retweeted_status.user.screen_name }}" target="_blank">{{ retweeted_status.user.name }}</a></small>
+        <small class="date">{{ __("at") }} <a href="http://www.twitter.com/{{ retweeted_status.user.screen_name }}/status/{{ id_str }}" target="_blank">{{ retweeted_status.created_at|date("g:sa") }}</a> {{ __("on") }} {{ retweeted_status.created_at|date("jS F Y") }}</small>
+    {% endif %}
+</li>
